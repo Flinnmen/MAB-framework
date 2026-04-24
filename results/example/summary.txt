@@ -8,11 +8,11 @@ Arms:
 Collision policy: linear_share
 Number of agents: 3
 Agents:
-  - Agent 0: RandomAgent
-  - Agent 1: EpsilonGreedyAgent
-  - Agent 2: UCB_BaselineAgent
+  - Agent 0: UCB_Lie
+  - Agent 1: UCB_Truth
+  - Agent 2: UCB_Truth
 Total rewards:
-  Agent 0 (RandomAgent): 18442.47
-  Agent 1 (EpsilonGreedyAgent): 24509.23
-  Agent 2 (UCB_BaselineAgent): 32819.27
+  Agent 0 (UCB_Lie): 13354.14
+  Agent 1 (UCB_Truth): 13354.14
+  Agent 2 (UCB_Truth): 13354.14
 ============================

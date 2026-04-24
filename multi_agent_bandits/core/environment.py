@@ -16,6 +16,11 @@ class Environment:
         return self.arms[arm_idx].sample()
 
     def step(self, agents):
+        for agent in agents:
+            chosenAgent = agents[agent.choose_agent()]
+            if chosenAgent.truthful:
+                agent.boosted_arm = max(range(len(chosenAgent.values)), key=lambda a: chosenAgent.values[a])
+
         choices = [agent.choose_arm() for agent in agents]
 
         collisions = {}

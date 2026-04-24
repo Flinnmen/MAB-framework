@@ -9,6 +9,6 @@ arm_2_mean,1.5
 arm_2_sd,1.0
 collision_policy,linear_share
 n_agents,3
-agent_0_name,RandomAgent
-agent_1_name,EpsilonGreedyAgent
-agent_2_name,UCB_BaselineAgent
+agent_0_name,UCB_Lie
+agent_1_name,UCB_Truth
+agent_2_name,UCB_Truth

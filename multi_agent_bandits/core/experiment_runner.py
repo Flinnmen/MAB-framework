@@ -32,6 +32,7 @@ class ExperimentRunner:
         self.print_experiment_info()
 
         for t in range(self.T):
+            print(f"{int((t+1)/self.T*100)}%")
             choices, rewards = self.env.step(self.agents)
             self.choices_log.append(choices)
             self.rewards_log.append(rewards)
