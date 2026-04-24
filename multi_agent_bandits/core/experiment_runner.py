@@ -30,8 +30,8 @@ class ExperimentRunner:
 
     def run(self, plot_rewards=False, plot_frequencies=False):
         self.print_experiment_info()
-
         for t in range(self.T):
+            print(self.T)
             print(f"{int((t+1)/self.T*100)}%")
             choices, rewards = self.env.step(self.agents)
             self.choices_log.append(choices)

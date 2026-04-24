@@ -14,3 +14,6 @@ def winner_takes_all(raw_reward, n_agents):
     rewards[winner] = raw_reward
     return rewards
 
+def raw(raw_reward, n_agents):
+    return [raw_reward] * n_agents
+

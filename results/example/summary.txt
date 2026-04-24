@@ -1,18 +1,30 @@
 ==== Experiment Summary ====
-Timesteps: 20000
-Number of arms: 3
+Timesteps: 10000
+Number of arms: 13
 Arms:
-  Arm 0: mean=1.0, sd=1.0
-  Arm 1: mean=2.0, sd=1.0
-  Arm 2: mean=1.5, sd=1.0
-Collision policy: linear_share
-Number of agents: 3
+  Arm 0: mean=3.0, sd=1.0
+  Arm 1: mean=2.7, sd=1.5
+  Arm 2: mean=2.5, sd=1.0
+  Arm 3: mean=2.0, sd=1.0
+  Arm 4: mean=2.0, sd=1.0
+  Arm 5: mean=1.8, sd=1.0
+  Arm 6: mean=1.5, sd=1.2
+  Arm 7: mean=1.5, sd=1.2
+  Arm 8: mean=1.2, sd=1.0
+  Arm 9: mean=1.0, sd=1.0
+  Arm 10: mean=1.0, sd=1.0
+  Arm 11: mean=0.8, sd=1.0
+  Arm 12: mean=0.5, sd=1.5
+Collision policy: raw
+Number of agents: 4
 Agents:
-  - Agent 0: UCB_Lie
-  - Agent 1: UCB_Truth
-  - Agent 2: UCB_Truth
+  - Agent 0: Social_EpsilonGreedyAgent
+  - Agent 1: Social_EpsilonGreedyAgent
+  - Agent 2: Social_UCB
+  - Agent 3: Social_UCB
 Total rewards:
-  Agent 0 (UCB_Lie): 13354.14
-  Agent 1 (UCB_Truth): 13354.14
-  Agent 2 (UCB_Truth): 13354.14
+  Agent 0 (Social_EpsilonGreedyAgent): 28662.70
+  Agent 1 (Social_EpsilonGreedyAgent): 28644.72
+  Agent 2 (Social_UCB): 29952.19
+  Agent 3 (Social_UCB): 29994.17
 ============================
