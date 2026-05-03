@@ -69,7 +69,7 @@ mab run name_of_your_experiment_script
 
 As long as your experiment script is located in the experiments folder.
 
-There's available flags for this command, defining number of steps, log saving and plotting. An example call could look like (from MAB-framework directory):
+There's available flags for this command, defining number of steps, logging and plotting. An example call could look like (from MAB-framework directory):
 
 mab run example --steps 20000 --save results/example --plot-rewards --plot-frequencies
 
