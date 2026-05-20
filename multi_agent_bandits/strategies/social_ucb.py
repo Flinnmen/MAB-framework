@@ -41,10 +41,10 @@ class Social_UCB(Agent):
         self.total_steps += 1
 
         #ensure we try each arm at least once
-        for arm in range(self.n_arms):
-            if self.counts[arm] == 0:
-                self.last_arm = arm
-                return arm
+        unpulled = [arm for arm in range(self.n_arms) if self.counts[arm] == 0]
+        if unpulled:
+            self.last_arm = random.choice(unpulled)
+            return self.last_arm
 
         self.ucb_scores = []
         for arm in range(self.n_arms):
@@ -57,6 +57,8 @@ class Social_UCB(Agent):
                 self.ucb_scores.append(self.values[arm] + bonus)
 
         #pick best
+        indices = list(range(self.n_arms))
+        random.shuffle(indices)
         self.last_arm = max(range(self.n_arms), key=lambda a: self.ucb_scores[a])
         return self.last_arm
 
